@@ -1,4 +1,4 @@
-package com.haichao.StrategyPattern;
+package com.haichao.day1.StrategyPattern;
 
 public class Squeak implements QuackBehavior{
   @Override
