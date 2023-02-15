@@ -10,10 +10,15 @@ import java.util.Date;
  */
 public class HelloDate {
 
+    public static void varArgs(String... args) {
+        System.out.println(new int[0].getClass());
+    }
+
     public static void main(String[] args) {
         System.out.println("Hello it's");
         System.out.println(new Date());
         System.out.println(new DataOnly().b);
+        varArgs("1", "2", "3");
     }
 }
 

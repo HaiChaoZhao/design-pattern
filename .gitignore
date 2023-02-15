@@ -1,4 +1,4 @@
-.idea/
-out/
+/java/.idea/
+/java/out/
 
 .classpath
