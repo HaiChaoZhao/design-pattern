@@ -13,6 +13,6 @@ public class ThirdDisplay implements Observer {
 
   @Override
   public void update(Observable o, Object arg) {
-    
+
   }
 }
