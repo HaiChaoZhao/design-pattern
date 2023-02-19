@@ -1,7 +1,9 @@
 package com.haichao.day4.Factory;
 
+import com.haichao.day4.Factory.Pizza.Pizza;
+
 public abstract class PizzaStore {
-  PizzaFactory pizzaFactory;
+  protected PizzaFactory pizzaFactory;
 
   public PizzaStore(PizzaFactory pizzaFactory ){
     this.pizzaFactory = pizzaFactory;
@@ -18,5 +20,5 @@ public abstract class PizzaStore {
     return pizza;
   }
 
-  public abstract Pizza createPizza(String type);
+  protected abstract Pizza createPizza(String type);
 }
