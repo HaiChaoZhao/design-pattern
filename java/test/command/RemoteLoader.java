@@ -22,7 +22,7 @@ public class RemoteLoader
 
     Light livingRoomLight = new Light();
     Light kitchenLight = new Light();
-    CeillingFan ceillingFan = new CeillingFan();
+    CeillingFan ceillingFan = new CeillingFan("Living room");
     GarageDoor garageDoor = new GarageDoor();
     Stereo stereo = new Stereo();
 
@@ -50,7 +50,7 @@ public class RemoteLoader
 
     remoteControl.onBtnWasPressed(0);
     remoteControl.offBtnWasPressed(0);
-
+    remoteControl.undoButtonWasPressed();
     remoteControl.onBtnWasPressed(1);
     remoteControl.offBtnWasPressed(1);
 

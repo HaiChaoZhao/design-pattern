@@ -4,6 +4,8 @@ public class RemoteControl {
   Command[] onCommands;
   Command[] offCommands;
 
+  Command undoCommand;
+
   public RemoteControl(){
     offCommands = new Command[7];
     onCommands = new Command[7];
@@ -13,6 +15,8 @@ public class RemoteControl {
       onCommands[i]=noCommand;
       offCommands[i] = noCommand;
     }
+
+    undoCommand = noCommand;
   }
 
   public void setCommands(int slotIndex, Command onCommand, Command offCommand){
@@ -22,17 +26,23 @@ public class RemoteControl {
 
   public void onBtnWasPressed(int slotIndex){
     onCommands[slotIndex].execute();
+    undoCommand = onCommands[slotIndex];
   }
   public void offBtnWasPressed(int slotIndex){
     offCommands[slotIndex].execute();
+    undoCommand = offCommands[slotIndex];
+  }
+
+  public void undoButtonWasPressed(){
+    undoCommand.undo();
   }
 
   @Override
   public String toString() {
-    StringBuffer stringBuffer = new StringBuffer();
+    StringBuilder stringBuffer = new StringBuilder();
     stringBuffer.append("\n------ Remote Control ------\n");
     for (int i = 0; i < onCommands.length; i++) {
-      stringBuffer.append("[slot " + i + "] " + onCommands[i].getClass().getName()+ "      "+ offCommands[i].getClass().getName() + "\n");
+      stringBuffer.append("[slot ").append(i).append("] ").append(onCommands[i].getClass().getName()).append("      ").append(offCommands[i].getClass().getName()).append("\n");
 
     }
     return  stringBuffer.toString();

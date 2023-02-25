@@ -3,9 +3,6 @@ package com.haichao.day1.StrategyPattern;
 public abstract class Duck {
     FlyBehavior flayBehavior;
     QuackBehavior quackBehavior;
-    public Duck(){
-
-    }
 
     public void performFly(){
         flayBehavior.fly();
