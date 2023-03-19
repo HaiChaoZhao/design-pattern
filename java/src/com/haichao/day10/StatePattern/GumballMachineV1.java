@@ -1,5 +1,7 @@
 package com.haichao.day10.StatePattern;
 
+
+
 public class GumballMachineV1 {
   State soldOutState;
   State noQuarterState;
@@ -63,6 +65,10 @@ public class GumballMachineV1 {
 
   public State getWinnerState() {
     return winnerState;
+  }
+
+  public State getState() {
+    return state;
   }
 
   public int getCount() {

@@ -3,8 +3,8 @@ package com.haichao.day10.StatePattern;
 import java.util.Random;
 
 public class HasQuarterState implements State{
-  Random randomWinner = new Random(System.currentTimeMillis());
-  private final GumballMachineV1 gumballMachine;
+  Random  randomWinner = new Random(System.currentTimeMillis());
+  private transient final GumballMachineV1 gumballMachine;
 
   public HasQuarterState(GumballMachineV1 gumballMachineV1){
     this.gumballMachine = gumballMachineV1;

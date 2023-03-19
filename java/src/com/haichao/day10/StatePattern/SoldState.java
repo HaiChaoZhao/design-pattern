@@ -2,7 +2,7 @@ package com.haichao.day10.StatePattern;
 
 public class SoldState implements State{
 
-  private final GumballMachineV1 gumballMachine;
+  private transient final GumballMachineV1 gumballMachine;
 
   public SoldState(GumballMachineV1 gumballMachineV1){
     this.gumballMachine = gumballMachineV1;
